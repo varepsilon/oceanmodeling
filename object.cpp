@@ -150,3 +150,8 @@ bool Hunter::Dispatch(Hunter& /* h */) {
 bool Obstacle::Dispatch(Prey& /* p */) {
     return false;
 }
+
+bool Obstacle::Dispatch(Hunter& /* h */) {
+    return false;
+}
+
