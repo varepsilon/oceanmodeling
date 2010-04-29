@@ -4,7 +4,7 @@
 #include "object.h"
 #include <vector>
 #include <utility>
-#include <map>
+#include <set>
 template <typename T>
 class Singleton {
 public:
@@ -25,7 +25,7 @@ protected:
  */
  using std::vector;
  using std::pair;
- using std::map;
+ using std::set;
 class Ocean : public Singleton<Ocean> {
 public:
     /*!
@@ -33,6 +33,8 @@ public:
       * or NULL pointer otherwise
       */
     Object* GetObject(int i, int j){
+      if(i < 0 || j < 0 || i >=width || j >= height)
+        return kShell;
       return inhabitants[i][j];
     }
 
@@ -46,16 +48,16 @@ public:
         this-> width = width;
         this-> height = height;
         Draw();
-        std::cout << "setsize draw\n";
       }
     }
 
     void TicTac(){
-    map<Object *, bool> acted_objects;
+      set<Object *> acted_objects;
+
       for(int i = 0; i < width; ++i)
         for(int j = 0; j < height; ++j)
-          if(inhabitants[i][j] != NULL && !acted_objects[inhabitants[i][j]]){
-            acted_objects[inhabitants[i][j]] = true;
+          if(inhabitants[i][j] != NULL && acted_objects.find(inhabitants[i][j]) == acted_objects.end()){
+            acted_objects.insert(inhabitants[i][j]);
             inhabitants[i][j]->Act();
           }
     }
@@ -66,8 +68,12 @@ public:
       * false if operation fails.
       */
     bool CreateNewObject(ObjectType t, int i, int j){
+      if(i < 0 || j < 0 || i >=width || j >= height)
+        return false;
+
       if(inhabitants[i][j] != NULL)
         return false;
+
       switch (t){
         case  HUNTER : {
           inhabitants[i][j] = new Hunter(i,j);
@@ -86,7 +92,6 @@ public:
         }
       }
       Draw();
-      std::cout << "create draw\n";
       return true;
     }
 
@@ -104,7 +109,6 @@ public:
       delete inhabitants[i][j];
       inhabitants[i][j] = NULL;
       Draw();
-      std::cout << "delete draw\n";
       return true;
     }
 
@@ -122,9 +126,10 @@ public:
       pair<int,int> coords = obj->GetCoords();
       if (i == coords.first && j == coords.second)
         return true;
+      obj->x_ = i;
+      obj->y_ = j;
       std::swap(inhabitants[coords.first][coords.second], inhabitants[i][j]);
       Draw();
-      std::cout << "move draw\n";
       return true;
     }
 
@@ -133,7 +138,7 @@ public:
     }
 
     void Draw(){
-      //static bool printed = false;
+      static std::streampos p = std::cout.tellp();
       for(int i = 0; i < height; ++i){
         for(int j = 0; j < width; ++j){
           //if(printed)
@@ -146,17 +151,29 @@ public:
         //if(printed)
           //std::cout << "\b";
         std::cout << '|' <<std::endl;
+
       }
-      for(int i = 0; i < width; ++i)
+      for(int i = 0; i < width; ++i){
         std::cout << '-';
+      }
       std::cout << std::endl;
+
+//      std::cout.seekp(p);
       //printed = true;
     }
 private:
     vector<vector<Object *> > inhabitants;
+    Obstacle * kShell;
     int width;
     int height;
-    Ocean() {}
+    Ocean() : kShell(new Obstacle){}
+    ~Ocean(){
+      for(int i =0; i < width; ++i)
+        for(int j = 0; j < height; ++j)
+          if(inhabitants[i][j] != NULL)
+            delete inhabitants[i][j];
+      delete kShell;
+    }
     friend class Singleton<Ocean>;
 };
 
