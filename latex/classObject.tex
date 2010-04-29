@@ -1,0 +1,120 @@
+\hypertarget{classObject}{
+\section{Object Class Reference}
+\label{classObject}\index{Object@{Object}}
+}
+Inheritance diagram for Object:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classObject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classObject_a683b351ee47dc69c4117cb9017c467d6}{Act} ()=0
+\item 
+virtual bool \hyperlink{classObject_a27d03e80827229de2ce885a0bc1c83c0}{Interact} (\hyperlink{classObject}{Object} $\ast$obj)=0
+\item 
+virtual bool \hyperlink{classObject_a70097e3ad4433aec0dd0b938fcedfeca}{Dispatch} (\hyperlink{classPrey}{Prey} \&p)=0
+\item 
+virtual bool \hyperlink{classObject_a0d0e1f0456837f6736913b1ba374f11d}{Dispatch} (\hyperlink{classHunter}{Hunter} \&h)=0
+\item 
+virtual void \hyperlink{classObject_a2c63e79dfa8626451b4a04b0b72294eb}{PrintSelf} () const =0
+\item 
+\hypertarget{classObject_acff116bb4de4bb36b38d0469defed939}{
+std::pair$<$ int, int $>$ {\bfseries GetCoords} () const }
+\label{classObject_acff116bb4de4bb36b38d0469defed939}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObject_ad2977e29718433084247cb65894c93af}{
+{\bfseries Object} (int x=0, int y=0)}
+\label{classObject_ad2977e29718433084247cb65894c93af}
+
+\item 
+\hypertarget{classObject_af3b5cd7a9a24ddde484344200cf83281}{
+{\bfseries Object} (const \hyperlink{classObject}{Object} \&)}
+\label{classObject_af3b5cd7a9a24ddde484344200cf83281}
+
+\item 
+\hypertarget{classObject_aef3f27c97a56ab9096bc2cbc6c850bc7}{
+\hyperlink{classObject}{Object} \& {\bfseries operator=} (const \hyperlink{classObject}{Object} \&)}
+\label{classObject_aef3f27c97a56ab9096bc2cbc6c850bc7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObject_ad0753c1468d66d4d88098f06ae2a29bb}{
+int {\bfseries x\_\-}}
+\label{classObject_ad0753c1468d66d4d88098f06ae2a29bb}
+
+\item 
+\hypertarget{classObject_a5fabb6445aafed3402a9431db73a8eb0}{
+int {\bfseries y\_\-}}
+\label{classObject_a5fabb6445aafed3402a9431db73a8eb0}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObject_afe3874c2dc8ab0fb894a9f3c80bfa1ad}{
+class \hyperlink{classObject_afe3874c2dc8ab0fb894a9f3c80bfa1ad}{Ocean}}
+\label{classObject_afe3874c2dc8ab0fb894a9f3c80bfa1ad}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classObject_a683b351ee47dc69c4117cb9017c467d6}{
+\index{Object@{Object}!Act@{Act}}
+\index{Act@{Act}!Object@{Object}}
+\subsubsection[{Act}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Object::Act ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classObject_a683b351ee47dc69c4117cb9017c467d6}
+Perform some action (die / reproduce itself / move / eat somebody) 
+
+Implemented in \hyperlink{classPrey_a940c0a8879376b15dedb7debf9b8f1c8}{Prey}, \hyperlink{classHunter_ac8bed4eeb2bfebcf7df72ba7359ac204}{Hunter}, and \hyperlink{classObstacle_a4e1f98a918838ca96638e7536e3748cb}{Obstacle}.
+
+\hypertarget{classObject_a0d0e1f0456837f6736913b1ba374f11d}{
+\index{Object@{Object}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Object@{Object}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Object::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classObject_a0d0e1f0456837f6736913b1ba374f11d}
+Utility function needed for multiple dispatch. Return true if h is happy. 
+
+Implemented in \hyperlink{classPrey_ac6b00aecc20017e58cabef00be961c6f}{Prey}, \hyperlink{classHunter_aa73667bb3b20a06d8c398eb2760e2902}{Hunter}, and \hyperlink{classObstacle_a8428a9d636c30b7c06d31066ad0dc412}{Obstacle}.
+
+\hypertarget{classObject_a70097e3ad4433aec0dd0b938fcedfeca}{
+\index{Object@{Object}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Object@{Object}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Object::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classObject_a70097e3ad4433aec0dd0b938fcedfeca}
+Utility function needed for multiple dispatch. Return true if p is happy. 
+
+Implemented in \hyperlink{classPrey_af37fdbe20f8868903d1ffdf4fb303946}{Prey}, \hyperlink{classHunter_aac1480382681187d650a9122dee9971c}{Hunter}, and \hyperlink{classObstacle_a930bb5cb375a6554ecc76f98a8ecaf0d}{Obstacle}.
+
+\hypertarget{classObject_a27d03e80827229de2ce885a0bc1c83c0}{
+\index{Object@{Object}!Interact@{Interact}}
+\index{Interact@{Interact}!Object@{Object}}
+\subsubsection[{Interact}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Object::Interact ({\bf Object} $\ast$ {\em obj})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classObject_a27d03e80827229de2ce885a0bc1c83c0}
+Interaction of 2 objects. Multiple dispatch idiom (pattern visitor). Return true if this \hyperlink{classObject}{Object} is happpy after interacting with obj (e.g. hunter eats prey). 
+
+Implemented in \hyperlink{classPrey_a3f46445d442e33d47edcc94bf5f537b4}{Prey}, \hyperlink{classHunter_aad1bd13407503496a74ae1a6c689e64f}{Hunter}, and \hyperlink{classObstacle_a53bec243dc8a00f23ec61c915aef4c3e}{Obstacle}.
+
+\hypertarget{classObject_a2c63e79dfa8626451b4a04b0b72294eb}{
+\index{Object@{Object}!PrintSelf@{PrintSelf}}
+\index{PrintSelf@{PrintSelf}!Object@{Object}}
+\subsubsection[{PrintSelf}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Object::PrintSelf () const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classObject_a2c63e79dfa8626451b4a04b0b72294eb}
+Print special symbol wich helps to visualize this object 
+
+Implemented in \hyperlink{classPrey_a46d5447bf01e734154f8d3f2f27c8fcd}{Prey}, \hyperlink{classHunter_a9b193792622fd203df15bf755753e9bd}{Hunter}, and \hyperlink{classObstacle_ad4355e9d1db002f6db2ca15ae5605d05}{Obstacle}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+object.h\end{DoxyCompactItemize}

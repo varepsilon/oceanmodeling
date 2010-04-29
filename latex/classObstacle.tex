@@ -1,0 +1,84 @@
+\hypertarget{classObstacle}{
+\section{Obstacle Class Reference}
+\label{classObstacle}\index{Obstacle@{Obstacle}}
+}
+Inheritance diagram for Obstacle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classObstacle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classObstacle_a4e1f98a918838ca96638e7536e3748cb}{Act} ()
+\item 
+virtual bool \hyperlink{classObstacle_a53bec243dc8a00f23ec61c915aef4c3e}{Interact} (\hyperlink{classObject}{Object} $\ast$)
+\item 
+virtual bool \hyperlink{classObstacle_a930bb5cb375a6554ecc76f98a8ecaf0d}{Dispatch} (\hyperlink{classPrey}{Prey} \&)
+\item 
+virtual bool \hyperlink{classObstacle_a8428a9d636c30b7c06d31066ad0dc412}{Dispatch} (\hyperlink{classHunter}{Hunter} \&)
+\item 
+virtual void \hyperlink{classObstacle_ad4355e9d1db002f6db2ca15ae5605d05}{PrintSelf} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObstacle_a57f504fff99441f6250b98ffce750a8a}{
+{\bfseries Obstacle} (int x=0, int y=0)}
+\label{classObstacle_a57f504fff99441f6250b98ffce750a8a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classObstacle_a4e1f98a918838ca96638e7536e3748cb}{
+\index{Obstacle@{Obstacle}!Act@{Act}}
+\index{Act@{Act}!Obstacle@{Obstacle}}
+\subsubsection[{Act}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Obstacle::Act ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classObstacle_a4e1f98a918838ca96638e7536e3748cb}
+Perform some action (die / reproduce itself / move / eat somebody) 
+
+Implements \hyperlink{classObject_a683b351ee47dc69c4117cb9017c467d6}{Object}.
+
+\hypertarget{classObstacle_a8428a9d636c30b7c06d31066ad0dc412}{
+\index{Obstacle@{Obstacle}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Obstacle@{Obstacle}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Obstacle::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classObstacle_a8428a9d636c30b7c06d31066ad0dc412}
+Utility function needed for multiple dispatch. Return true if h is happy. 
+
+Implements \hyperlink{classObject_a0d0e1f0456837f6736913b1ba374f11d}{Object}.
+
+\hypertarget{classObstacle_a930bb5cb375a6554ecc76f98a8ecaf0d}{
+\index{Obstacle@{Obstacle}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Obstacle@{Obstacle}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Obstacle::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classObstacle_a930bb5cb375a6554ecc76f98a8ecaf0d}
+Utility function needed for multiple dispatch. Return true if p is happy. 
+
+Implements \hyperlink{classObject_a70097e3ad4433aec0dd0b938fcedfeca}{Object}.
+
+\hypertarget{classObstacle_a53bec243dc8a00f23ec61c915aef4c3e}{
+\index{Obstacle@{Obstacle}!Interact@{Interact}}
+\index{Interact@{Interact}!Obstacle@{Obstacle}}
+\subsubsection[{Interact}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Obstacle::Interact ({\bf Object} $\ast$ {\em obj})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classObstacle_a53bec243dc8a00f23ec61c915aef4c3e}
+Interaction of 2 objects. Multiple dispatch idiom (pattern visitor). Return true if this \hyperlink{classObject}{Object} is happpy after interacting with obj (e.g. hunter eats prey). 
+
+Implements \hyperlink{classObject_a27d03e80827229de2ce885a0bc1c83c0}{Object}.
+
+\hypertarget{classObstacle_ad4355e9d1db002f6db2ca15ae5605d05}{
+\index{Obstacle@{Obstacle}!PrintSelf@{PrintSelf}}
+\index{PrintSelf@{PrintSelf}!Obstacle@{Obstacle}}
+\subsubsection[{PrintSelf}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Obstacle::PrintSelf () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classObstacle_ad4355e9d1db002f6db2ca15ae5605d05}
+Print special symbol wich helps to visualize this object 
+
+Implements \hyperlink{classObject_a2c63e79dfa8626451b4a04b0b72294eb}{Object}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+object.h\end{DoxyCompactItemize}

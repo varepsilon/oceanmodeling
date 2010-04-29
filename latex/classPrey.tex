@@ -1,0 +1,93 @@
+\hypertarget{classPrey}{
+\section{Prey Class Reference}
+\label{classPrey}\index{Prey@{Prey}}
+}
+Inheritance diagram for Prey:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPrey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classPrey_a940c0a8879376b15dedb7debf9b8f1c8}{Act} ()
+\item 
+virtual bool \hyperlink{classPrey_a3f46445d442e33d47edcc94bf5f537b4}{Interact} (\hyperlink{classObject}{Object} $\ast$obj)
+\item 
+virtual bool \hyperlink{classPrey_af37fdbe20f8868903d1ffdf4fb303946}{Dispatch} (\hyperlink{classPrey}{Prey} \&p)
+\item 
+virtual bool \hyperlink{classPrey_ac6b00aecc20017e58cabef00be961c6f}{Dispatch} (\hyperlink{classHunter}{Hunter} \&h)
+\item 
+virtual void \hyperlink{classPrey_a46d5447bf01e734154f8d3f2f27c8fcd}{PrintSelf} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPrey_a1e65463a2ed66b174fcd735676b0d68e}{
+{\bfseries Prey} (int x=0, int y=0, int time\_\-to\_\-reproduce=DEFAULT\_\-TIME\_\-TO\_\-REPRODUCE)}
+\label{classPrey_a1e65463a2ed66b174fcd735676b0d68e}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPrey_a0720b5f434e636e22a3ed34f847eec57}{
+class \hyperlink{classPrey_a0720b5f434e636e22a3ed34f847eec57}{Object}}
+\label{classPrey_a0720b5f434e636e22a3ed34f847eec57}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPrey_a940c0a8879376b15dedb7debf9b8f1c8}{
+\index{Prey@{Prey}!Act@{Act}}
+\index{Act@{Act}!Prey@{Prey}}
+\subsubsection[{Act}]{\setlength{\rightskip}{0pt plus 5cm}void Prey::Act ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPrey_a940c0a8879376b15dedb7debf9b8f1c8}
+Perform some action (die / reproduce itself / move / eat somebody) 
+
+Implements \hyperlink{classObject_a683b351ee47dc69c4117cb9017c467d6}{Object}.
+
+\hypertarget{classPrey_ac6b00aecc20017e58cabef00be961c6f}{
+\index{Prey@{Prey}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Prey@{Prey}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Prey::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPrey_ac6b00aecc20017e58cabef00be961c6f}
+Utility function needed for multiple dispatch. Return true if h is happy. 
+
+Implements \hyperlink{classObject_a0d0e1f0456837f6736913b1ba374f11d}{Object}.
+
+\hypertarget{classPrey_af37fdbe20f8868903d1ffdf4fb303946}{
+\index{Prey@{Prey}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Prey@{Prey}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Prey::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPrey_af37fdbe20f8868903d1ffdf4fb303946}
+Utility function needed for multiple dispatch. Return true if p is happy. 
+
+Implements \hyperlink{classObject_a70097e3ad4433aec0dd0b938fcedfeca}{Object}.
+
+\hypertarget{classPrey_a3f46445d442e33d47edcc94bf5f537b4}{
+\index{Prey@{Prey}!Interact@{Interact}}
+\index{Interact@{Interact}!Prey@{Prey}}
+\subsubsection[{Interact}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Prey::Interact ({\bf Object} $\ast$ {\em obj})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classPrey_a3f46445d442e33d47edcc94bf5f537b4}
+Interaction of 2 objects. Multiple dispatch idiom (pattern visitor). Return true if this \hyperlink{classObject}{Object} is happpy after interacting with obj (e.g. hunter eats prey). 
+
+Implements \hyperlink{classObject_a27d03e80827229de2ce885a0bc1c83c0}{Object}.
+
+\hypertarget{classPrey_a46d5447bf01e734154f8d3f2f27c8fcd}{
+\index{Prey@{Prey}!PrintSelf@{PrintSelf}}
+\index{PrintSelf@{PrintSelf}!Prey@{Prey}}
+\subsubsection[{PrintSelf}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Prey::PrintSelf () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classPrey_a46d5447bf01e734154f8d3f2f27c8fcd}
+Print special symbol wich helps to visualize this object 
+
+Implements \hyperlink{classObject_a2c63e79dfa8626451b4a04b0b72294eb}{Object}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+object.h\item 
+object.cpp\end{DoxyCompactItemize}

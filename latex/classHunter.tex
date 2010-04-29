@@ -1,0 +1,85 @@
+\hypertarget{classHunter}{
+\section{Hunter Class Reference}
+\label{classHunter}\index{Hunter@{Hunter}}
+}
+Inheritance diagram for Hunter:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classHunter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classHunter_ac8bed4eeb2bfebcf7df72ba7359ac204}{Act} ()
+\item 
+virtual bool \hyperlink{classHunter_aad1bd13407503496a74ae1a6c689e64f}{Interact} (\hyperlink{classObject}{Object} $\ast$obj)
+\item 
+virtual bool \hyperlink{classHunter_aac1480382681187d650a9122dee9971c}{Dispatch} (\hyperlink{classPrey}{Prey} \&p)
+\item 
+virtual bool \hyperlink{classHunter_aa73667bb3b20a06d8c398eb2760e2902}{Dispatch} (\hyperlink{classHunter}{Hunter} \&h)
+\item 
+virtual void \hyperlink{classHunter_a9b193792622fd203df15bf755753e9bd}{PrintSelf} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classHunter_a24cf0cbb9ca4df6886bcdff91c2aa9a2}{
+{\bfseries Hunter} (int x=0, int y=0, int time\_\-to\_\-reproduce=DEFAULT\_\-TIME\_\-TO\_\-REPRODUCE, int time\_\-to\_\-die=DEFAULT\_\-TIME\_\-TO\_\-DIE)}
+\label{classHunter_a24cf0cbb9ca4df6886bcdff91c2aa9a2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classHunter_ac8bed4eeb2bfebcf7df72ba7359ac204}{
+\index{Hunter@{Hunter}!Act@{Act}}
+\index{Act@{Act}!Hunter@{Hunter}}
+\subsubsection[{Act}]{\setlength{\rightskip}{0pt plus 5cm}void Hunter::Act ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classHunter_ac8bed4eeb2bfebcf7df72ba7359ac204}
+Perform some action (die / reproduce itself / move / eat somebody) 
+
+Implements \hyperlink{classObject_a683b351ee47dc69c4117cb9017c467d6}{Object}.
+
+\hypertarget{classHunter_aa73667bb3b20a06d8c398eb2760e2902}{
+\index{Hunter@{Hunter}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Hunter@{Hunter}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Hunter::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classHunter_aa73667bb3b20a06d8c398eb2760e2902}
+Utility function needed for multiple dispatch. Return true if h is happy. 
+
+Implements \hyperlink{classObject_a0d0e1f0456837f6736913b1ba374f11d}{Object}.
+
+\hypertarget{classHunter_aac1480382681187d650a9122dee9971c}{
+\index{Hunter@{Hunter}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Hunter@{Hunter}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Hunter::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classHunter_aac1480382681187d650a9122dee9971c}
+Utility function needed for multiple dispatch. Return true if p is happy. 
+
+Implements \hyperlink{classObject_a70097e3ad4433aec0dd0b938fcedfeca}{Object}.
+
+\hypertarget{classHunter_aad1bd13407503496a74ae1a6c689e64f}{
+\index{Hunter@{Hunter}!Interact@{Interact}}
+\index{Interact@{Interact}!Hunter@{Hunter}}
+\subsubsection[{Interact}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Hunter::Interact ({\bf Object} $\ast$ {\em obj})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classHunter_aad1bd13407503496a74ae1a6c689e64f}
+Interaction of 2 objects. Multiple dispatch idiom (pattern visitor). Return true if this \hyperlink{classObject}{Object} is happpy after interacting with obj (e.g. hunter eats prey). 
+
+Implements \hyperlink{classObject_a27d03e80827229de2ce885a0bc1c83c0}{Object}.
+
+\hypertarget{classHunter_a9b193792622fd203df15bf755753e9bd}{
+\index{Hunter@{Hunter}!PrintSelf@{PrintSelf}}
+\index{PrintSelf@{PrintSelf}!Hunter@{Hunter}}
+\subsubsection[{PrintSelf}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Hunter::PrintSelf () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classHunter_a9b193792622fd203df15bf755753e9bd}
+Print special symbol wich helps to visualize this object 
+
+Implements \hyperlink{classObject_a2c63e79dfa8626451b4a04b0b72294eb}{Object}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+object.h\item 
+object.cpp\end{DoxyCompactItemize}
