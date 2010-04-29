@@ -75,6 +75,7 @@ protected:
 
 private:
     friend class Object;
+    friend class Ocean;
     int time_to_reproduce_left_;
     const int time_to_reproduce_;
 };
@@ -98,7 +99,8 @@ protected:
 private:
     int time_to_reproduce_left_;
     const int time_to_reproduce_;
-
+   
+    friend class Ocean;
     int time_to_die_left_;
     const int time_to_die_;
 };
@@ -112,6 +114,8 @@ public:
     virtual void PrintSelf() const { std::cout << "*"; }
 protected:
     Obstacle(int x = 0, int y = 0) : Object(x, y) {}
+
+    friend class Ocean;
 };
 
 #endif // OBJECT_H_

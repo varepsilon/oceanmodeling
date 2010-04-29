@@ -20,7 +20,7 @@ void Prey::Act() {
         free_cells.push_back(std::make_pair(x_, y_ - 1));
     }
     if (!left) {
-        free_cells.push_back(std::make_pair(x_ - 1, y));
+        free_cells.push_back(std::make_pair(x_ - 1, y_));
     }
     if (!right) {
         free_cells.push_back(std::make_pair(x_ + 1, y_));
@@ -70,7 +70,7 @@ void Hunter::Act() {
             free_cells.push_back(std::make_pair(x_, y_ - 1));
         }
         if (!left) {
-            free_cells.push_back(std::make_pair(x_ - 1, y));
+            free_cells.push_back(std::make_pair(x_ - 1, y_));
         }
         if (!right) {
             free_cells.push_back(std::make_pair(x_ + 1, y_));
@@ -110,17 +110,17 @@ void Hunter::Act() {
     // If this cell is free
     if (objects[random_cell_index] == NULL) {
             // Go to the adjacent free cell
-            ocean.MoveObject(this, free_cells[random_free_cell_index]);
+            ocean.MoveObject(this, cells[random_cell_index]);
             --time_to_die_left_;
             --time_to_reproduce_left_;
             return;
         }
-    } else {
+    else {
         if (Interact(objects[random_cell_index]) == true) {
             // Hunter is happy :)
             time_to_die_left_ = time_to_die_;
         } else {
-            --time_to_die_left;
+            --time_to_die_left_;
         }
         --time_to_reproduce_left_;
         return;
