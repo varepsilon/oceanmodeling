@@ -7,7 +7,7 @@
 #include <cstdlib>
 
 const int DEFAULT_TIME_TO_REPRODUCE = 5;
-const int DEFAULT_TIME_TO_DIE = 10;
+const int DEFAULT_TIME_TO_DIE = 5;
 
 enum ObjectType {
     PREY,

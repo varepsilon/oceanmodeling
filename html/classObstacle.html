@@ -60,12 +60,15 @@ Inheritance diagram for Obstacle:</div>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a4e1f98a918838ca96638e7536e3748cb">Act</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a53bec243dc8a00f23ec61c915aef4c3e">Interact</a> (<a class="el" href="classObject.html">Object</a> *)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a930bb5cb375a6554ecc76f98a8ecaf0d">Dispatch</a> (<a class="el" href="classPrey.html">Prey</a> &amp;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a8428a9d636c30b7c06d31066ad0dc412">Dispatch</a> (<a class="el" href="classHunter.html">Hunter</a> &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a68eae0dce57aa9f5c044d4223211bfab">Dispatch</a> (<a class="el" href="classPrey.html">Prey</a> &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a10634bf63cc9f11493002c7105fc7e93">Dispatch</a> (<a class="el" href="classHunter.html">Hunter</a> &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ad4355e9d1db002f6db2ca15ae5605d05">PrintSelf</a> () const </td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57f504fff99441f6250b98ffce750a8a"></a><!-- doxytag: member="Obstacle::Obstacle" ref="a57f504fff99441f6250b98ffce750a8a" args="(int x=0, int y=0)" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><b>Obstacle</b> (int x=0, int y=0)</td></tr>
+<tr><td colspan="2"><h2>Friends</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe3874c2dc8ab0fb894a9f3c80bfa1ad"></a><!-- doxytag: member="Obstacle::Ocean" ref="afe3874c2dc8ab0fb894a9f3c80bfa1ad" args="" -->
+class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#afe3874c2dc8ab0fb894a9f3c80bfa1ad">Ocean</a></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a4e1f98a918838ca96638e7536e3748cb"></a><!-- doxytag: member="Obstacle::Act" ref="a4e1f98a918838ca96638e7536e3748cb" args="()" -->
@@ -88,12 +91,12 @@ Inheritance diagram for Obstacle:</div>
 
 </div>
 </div>
-<a class="anchor" id="a8428a9d636c30b7c06d31066ad0dc412"></a><!-- doxytag: member="Obstacle::Dispatch" ref="a8428a9d636c30b7c06d31066ad0dc412" args="(Hunter &amp;)" -->
+<a class="anchor" id="a10634bf63cc9f11493002c7105fc7e93"></a><!-- doxytag: member="Obstacle::Dispatch" ref="a10634bf63cc9f11493002c7105fc7e93" args="(Hunter &amp;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Obstacle::Dispatch </td>
+          <td class="memname">bool Obstacle::Dispatch </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classHunter.html">Hunter</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>h</em></td>
@@ -109,12 +112,12 @@ Inheritance diagram for Obstacle:</div>
 
 </div>
 </div>
-<a class="anchor" id="a930bb5cb375a6554ecc76f98a8ecaf0d"></a><!-- doxytag: member="Obstacle::Dispatch" ref="a930bb5cb375a6554ecc76f98a8ecaf0d" args="(Prey &amp;)" -->
+<a class="anchor" id="a68eae0dce57aa9f5c044d4223211bfab"></a><!-- doxytag: member="Obstacle::Dispatch" ref="a68eae0dce57aa9f5c044d4223211bfab" args="(Prey &amp;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Obstacle::Dispatch </td>
+          <td class="memname">bool Obstacle::Dispatch </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classPrey.html">Prey</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>p</em></td>
@@ -171,8 +174,9 @@ Inheritance diagram for Obstacle:</div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="object_8h_source.html">object.h</a></li>
+<li>object.cpp</li>
 </ul>
 </div>
 <!--- window showing the filter options -->
@@ -189,7 +193,7 @@ Inheritance diagram for Obstacle:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Apr 29 21:45:45 2010 for oceanmodeling by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Apr 30 03:24:59 2010 for oceanmodeling by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

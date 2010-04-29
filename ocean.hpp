@@ -21,7 +21,7 @@ protected:
 
 
 /*!
- * Factory pattern (?).
+ * Factory pattern.
  */
  using std::vector;
  using std::pair;
@@ -179,6 +179,11 @@ public:
     }
 private:
     vector<vector<Object *> > inhabitants;
+    /*!
+     * We don't know the name for this pattern. I think that suitable name
+     * would be "Mirror pattern", because this kShell obstacle instance
+     * acts as many mirroring instances of Obstacle class forming the bounds
+     */
     Obstacle * kShell;
     int width;
     int height;

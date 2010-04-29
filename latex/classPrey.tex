@@ -15,9 +15,9 @@ virtual void \hyperlink{classPrey_a940c0a8879376b15dedb7debf9b8f1c8}{Act} ()
 \item 
 virtual bool \hyperlink{classPrey_a3f46445d442e33d47edcc94bf5f537b4}{Interact} (\hyperlink{classObject}{Object} $\ast$obj)
 \item 
-virtual bool \hyperlink{classPrey_af37fdbe20f8868903d1ffdf4fb303946}{Dispatch} (\hyperlink{classPrey}{Prey} \&p)
+virtual bool \hyperlink{classPrey_a1c9491af7144879d4eb0a63e5de4d6b9}{Dispatch} (\hyperlink{classPrey}{Prey} \&p)
 \item 
-virtual bool \hyperlink{classPrey_ac6b00aecc20017e58cabef00be961c6f}{Dispatch} (\hyperlink{classHunter}{Hunter} \&h)
+virtual bool \hyperlink{classPrey_ae1ad92ee4416c74c45a5e4098ba5e327}{Dispatch} (\hyperlink{classHunter}{Hunter} \&h)
 \item 
 virtual void \hyperlink{classPrey_a46d5447bf01e734154f8d3f2f27c8fcd}{PrintSelf} () const 
 \end{DoxyCompactItemize}
@@ -36,6 +36,11 @@ virtual void \hyperlink{classPrey_a46d5447bf01e734154f8d3f2f27c8fcd}{PrintSelf} 
 class \hyperlink{classPrey_a0720b5f434e636e22a3ed34f847eec57}{Object}}
 \label{classPrey_a0720b5f434e636e22a3ed34f847eec57}
 
+\item 
+\hypertarget{classPrey_afe3874c2dc8ab0fb894a9f3c80bfa1ad}{
+class \hyperlink{classPrey_afe3874c2dc8ab0fb894a9f3c80bfa1ad}{Ocean}}
+\label{classPrey_afe3874c2dc8ab0fb894a9f3c80bfa1ad}
+
 \end{DoxyCompactItemize}
 
 
@@ -49,20 +54,20 @@ Perform some action (die / reproduce itself / move / eat somebody)
 
 Implements \hyperlink{classObject_a683b351ee47dc69c4117cb9017c467d6}{Object}.
 
-\hypertarget{classPrey_ac6b00aecc20017e58cabef00be961c6f}{
+\hypertarget{classPrey_ae1ad92ee4416c74c45a5e4098ba5e327}{
 \index{Prey@{Prey}!Dispatch@{Dispatch}}
 \index{Dispatch@{Dispatch}!Prey@{Prey}}
-\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Prey::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{classPrey_ac6b00aecc20017e58cabef00be961c6f}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}bool Prey::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPrey_ae1ad92ee4416c74c45a5e4098ba5e327}
 Utility function needed for multiple dispatch. Return true if h is happy. 
 
 Implements \hyperlink{classObject_a0d0e1f0456837f6736913b1ba374f11d}{Object}.
 
-\hypertarget{classPrey_af37fdbe20f8868903d1ffdf4fb303946}{
+\hypertarget{classPrey_a1c9491af7144879d4eb0a63e5de4d6b9}{
 \index{Prey@{Prey}!Dispatch@{Dispatch}}
 \index{Dispatch@{Dispatch}!Prey@{Prey}}
-\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Prey::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{classPrey_af37fdbe20f8868903d1ffdf4fb303946}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}bool Prey::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPrey_a1c9491af7144879d4eb0a63e5de4d6b9}
 Utility function needed for multiple dispatch. Return true if p is happy. 
 
 Implements \hyperlink{classObject_a70097e3ad4433aec0dd0b938fcedfeca}{Object}.

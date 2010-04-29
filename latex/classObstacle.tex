@@ -15,9 +15,9 @@ virtual void \hyperlink{classObstacle_a4e1f98a918838ca96638e7536e3748cb}{Act} ()
 \item 
 virtual bool \hyperlink{classObstacle_a53bec243dc8a00f23ec61c915aef4c3e}{Interact} (\hyperlink{classObject}{Object} $\ast$)
 \item 
-virtual bool \hyperlink{classObstacle_a930bb5cb375a6554ecc76f98a8ecaf0d}{Dispatch} (\hyperlink{classPrey}{Prey} \&)
+virtual bool \hyperlink{classObstacle_a68eae0dce57aa9f5c044d4223211bfab}{Dispatch} (\hyperlink{classPrey}{Prey} \&)
 \item 
-virtual bool \hyperlink{classObstacle_a8428a9d636c30b7c06d31066ad0dc412}{Dispatch} (\hyperlink{classHunter}{Hunter} \&)
+virtual bool \hyperlink{classObstacle_a10634bf63cc9f11493002c7105fc7e93}{Dispatch} (\hyperlink{classHunter}{Hunter} \&)
 \item 
 virtual void \hyperlink{classObstacle_ad4355e9d1db002f6db2ca15ae5605d05}{PrintSelf} () const 
 \end{DoxyCompactItemize}
@@ -27,6 +27,14 @@ virtual void \hyperlink{classObstacle_ad4355e9d1db002f6db2ca15ae5605d05}{PrintSe
 \hypertarget{classObstacle_a57f504fff99441f6250b98ffce750a8a}{
 {\bfseries Obstacle} (int x=0, int y=0)}
 \label{classObstacle_a57f504fff99441f6250b98ffce750a8a}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classObstacle_afe3874c2dc8ab0fb894a9f3c80bfa1ad}{
+class \hyperlink{classObstacle_afe3874c2dc8ab0fb894a9f3c80bfa1ad}{Ocean}}
+\label{classObstacle_afe3874c2dc8ab0fb894a9f3c80bfa1ad}
 
 \end{DoxyCompactItemize}
 
@@ -41,20 +49,20 @@ Perform some action (die / reproduce itself / move / eat somebody)
 
 Implements \hyperlink{classObject_a683b351ee47dc69c4117cb9017c467d6}{Object}.
 
-\hypertarget{classObstacle_a8428a9d636c30b7c06d31066ad0dc412}{
+\hypertarget{classObstacle_a10634bf63cc9f11493002c7105fc7e93}{
 \index{Obstacle@{Obstacle}!Dispatch@{Dispatch}}
 \index{Dispatch@{Dispatch}!Obstacle@{Obstacle}}
-\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Obstacle::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{classObstacle_a8428a9d636c30b7c06d31066ad0dc412}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}bool Obstacle::Dispatch ({\bf Hunter} \& {\em h})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classObstacle_a10634bf63cc9f11493002c7105fc7e93}
 Utility function needed for multiple dispatch. Return true if h is happy. 
 
 Implements \hyperlink{classObject_a0d0e1f0456837f6736913b1ba374f11d}{Object}.
 
-\hypertarget{classObstacle_a930bb5cb375a6554ecc76f98a8ecaf0d}{
+\hypertarget{classObstacle_a68eae0dce57aa9f5c044d4223211bfab}{
 \index{Obstacle@{Obstacle}!Dispatch@{Dispatch}}
 \index{Dispatch@{Dispatch}!Obstacle@{Obstacle}}
-\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Obstacle::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
-\label{classObstacle_a930bb5cb375a6554ecc76f98a8ecaf0d}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}bool Obstacle::Dispatch ({\bf Prey} \& {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classObstacle_a68eae0dce57aa9f5c044d4223211bfab}
 Utility function needed for multiple dispatch. Return true if p is happy. 
 
 Implements \hyperlink{classObject_a70097e3ad4433aec0dd0b938fcedfeca}{Object}.
@@ -79,6 +87,7 @@ Implements \hyperlink{classObject_a2c63e79dfa8626451b4a04b0b72294eb}{Object}.
 
 
 
-The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-object.h\end{DoxyCompactItemize}
+object.h\item 
+object.cpp\end{DoxyCompactItemize}

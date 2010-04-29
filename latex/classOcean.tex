@@ -2,10 +2,6 @@
 \section{Ocean Class Reference}
 \label{classOcean}\index{Ocean@{Ocean}}
 }
-
-
-{\ttfamily \#include $<$ocean.hpp$>$}
-
 Inheritance diagram for Ocean:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,6 +23,12 @@ Inheritance diagram for Ocean:\begin{figure}[H]
 \label{classOcean_adfd57c71b3f5b1641cbc2c75765f9e38}
 
 \item 
+void \hyperlink{classOcean_af99ba918325e6190c0185d01d53d4efb}{SetSize} (int width, int height)
+\item 
+void \hyperlink{classOcean_a407104f71338029cd64258afc107187a}{TicTac} ()
+\item 
+void \hyperlink{classOcean_ac4ebb157e229dd87113c376366f99888}{Live} ()
+\item 
 bool \hyperlink{classOcean_a66c18f1745faa96683ba9d42bcdec9bb}{CreateNewObject} (ObjectType t, int i, int j)
 \item 
 \hypertarget{classOcean_a2926e26c57d9f650c89298eadf63ccc6}{
@@ -47,6 +49,11 @@ bool \hyperlink{classOcean_a7b9cb70ece3c3275003ea49bdba2c2e2}{MoveObject} (\hype
 bool {\bfseries MoveObject} (\hyperlink{classObject}{Object} $\ast$obj, std::pair$<$ int, int $>$ coords)}
 \label{classOcean_adeab83a1c9b5baf97e963f65847b277b}
 
+\item 
+\hypertarget{classOcean_aae9106a2b296255a476b6dbad3ec9399}{
+void {\bfseries Draw} ()}
+\label{classOcean_aae9106a2b296255a476b6dbad3ec9399}
+
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -58,31 +65,43 @@ class \hyperlink{classOcean_ae61b3a3c8247476add2d45d9cc4cb486}{Singleton$<$ Ocea
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-Factory pattern (?). 
-
 \subsection{Member Function Documentation}
 \hypertarget{classOcean_a66c18f1745faa96683ba9d42bcdec9bb}{
 \index{Ocean@{Ocean}!CreateNewObject@{CreateNewObject}}
 \index{CreateNewObject@{CreateNewObject}!Ocean@{Ocean}}
-\subsubsection[{CreateNewObject}]{\setlength{\rightskip}{0pt plus 5cm}bool Ocean::CreateNewObject (ObjectType {\em t}, \/  int {\em i}, \/  int {\em j})}}
+\subsubsection[{CreateNewObject}]{\setlength{\rightskip}{0pt plus 5cm}bool Ocean::CreateNewObject (ObjectType {\em t}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
 \label{classOcean_a66c18f1745faa96683ba9d42bcdec9bb}
 Create new object of type t under the coordinates (i, j). Return false if operation fails. \hypertarget{classOcean_a15165a09cbd8a6075d622902f562bc15}{
 \index{Ocean@{Ocean}!DeleteObject@{DeleteObject}}
 \index{DeleteObject@{DeleteObject}!Ocean@{Ocean}}
-\subsubsection[{DeleteObject}]{\setlength{\rightskip}{0pt plus 5cm}bool Ocean::DeleteObject (int {\em i}, \/  int {\em j})}}
+\subsubsection[{DeleteObject}]{\setlength{\rightskip}{0pt plus 5cm}bool Ocean::DeleteObject (int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
 \label{classOcean_a15165a09cbd8a6075d622902f562bc15}
 Delete object under the coordinates (i, j) (if any). Return false if operation fails. \hypertarget{classOcean_abe1c2639f431f057509ba765682fb8cc}{
 \index{Ocean@{Ocean}!GetObject@{GetObject}}
 \index{GetObject@{GetObject}!Ocean@{Ocean}}
-\subsubsection[{GetObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ Ocean::GetObject (int {\em i}, \/  int {\em j})}}
+\subsubsection[{GetObject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ Ocean::GetObject (int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
 \label{classOcean_abe1c2639f431f057509ba765682fb8cc}
-Return pointer to the object located by coordinates (i, j) if any or NULL pointer otherwise \hypertarget{classOcean_a7b9cb70ece3c3275003ea49bdba2c2e2}{
+Return pointer to the object located by coordinates (i, j) if any or NULL pointer otherwise \hypertarget{classOcean_ac4ebb157e229dd87113c376366f99888}{
+\index{Ocean@{Ocean}!Live@{Live}}
+\index{Live@{Live}!Ocean@{Ocean}}
+\subsubsection[{Live}]{\setlength{\rightskip}{0pt plus 5cm}void Ocean::Live ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classOcean_ac4ebb157e229dd87113c376366f99888}
+ocean starts it's life \hypertarget{classOcean_a7b9cb70ece3c3275003ea49bdba2c2e2}{
 \index{Ocean@{Ocean}!MoveObject@{MoveObject}}
 \index{MoveObject@{MoveObject}!Ocean@{Ocean}}
-\subsubsection[{MoveObject}]{\setlength{\rightskip}{0pt plus 5cm}bool Ocean::MoveObject ({\bf Object} $\ast$ {\em obj}, \/  int {\em i}, \/  int {\em j})}}
+\subsubsection[{MoveObject}]{\setlength{\rightskip}{0pt plus 5cm}bool Ocean::MoveObject ({\bf Object} $\ast$ {\em obj}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
 \label{classOcean_a7b9cb70ece3c3275003ea49bdba2c2e2}
-Move object to the coordinates (i, j). Return false if operation fails. 
+Move object to the coordinates (i, j). Return false if operation fails. \hypertarget{classOcean_af99ba918325e6190c0185d01d53d4efb}{
+\index{Ocean@{Ocean}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!Ocean@{Ocean}}
+\subsubsection[{SetSize}]{\setlength{\rightskip}{0pt plus 5cm}void Ocean::SetSize (int {\em width}, \/  int {\em height})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classOcean_af99ba918325e6190c0185d01d53d4efb}
+Sets size of ocean \hypertarget{classOcean_a407104f71338029cd64258afc107187a}{
+\index{Ocean@{Ocean}!TicTac@{TicTac}}
+\index{TicTac@{TicTac}!Ocean@{Ocean}}
+\subsubsection[{TicTac}]{\setlength{\rightskip}{0pt plus 5cm}void Ocean::TicTac ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classOcean_a407104f71338029cd64258afc107187a}
+Time is money 
 
 The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
 \item 

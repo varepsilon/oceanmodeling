@@ -44,9 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="contents">
-<h1>Ocean Class Reference</h1><!-- doxytag: class="Ocean" --><!-- doxytag: inherits="Singleton&lt; Ocean &gt;" -->
-<p><code>#include &lt;<a class="el" href="ocean_8hpp_source.html">ocean.hpp</a>&gt;</code></p>
-<div class="dynheader">
+<h1>Ocean Class Reference</h1><!-- doxytag: class="Ocean" --><!-- doxytag: inherits="Singleton&lt; Ocean &gt;" --><div class="dynheader">
 Inheritance diagram for Ocean:</div>
 <div class="dynsection">
  <div class="center">
@@ -65,6 +63,9 @@ Inheritance diagram for Ocean:</div>
 <a class="el" href="classObject.html">Object</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetObject</b> (std::pair&lt; int, int &gt; coords)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfd57c71b3f5b1641cbc2c75765f9e38"></a><!-- doxytag: member="Ocean::operator()" ref="adfd57c71b3f5b1641cbc2c75765f9e38" args="(int i, int j)" -->
 <a class="el" href="classObject.html">Object</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (int i, int j)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOcean.html#af99ba918325e6190c0185d01d53d4efb">SetSize</a> (int width, int height)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOcean.html#a407104f71338029cd64258afc107187a">TicTac</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOcean.html#ac4ebb157e229dd87113c376366f99888">Live</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOcean.html#a66c18f1745faa96683ba9d42bcdec9bb">CreateNewObject</a> (ObjectType t, int i, int j)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2926e26c57d9f650c89298eadf63ccc6"></a><!-- doxytag: member="Ocean::CreateNewObject" ref="a2926e26c57d9f650c89298eadf63ccc6" args="(ObjectType t, std::pair&lt; int, int &gt; coords)" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>CreateNewObject</b> (ObjectType t, std::pair&lt; int, int &gt; coords)</td></tr>
@@ -74,12 +75,12 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>DeleteObject</b> (std
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOcean.html#a7b9cb70ece3c3275003ea49bdba2c2e2">MoveObject</a> (<a class="el" href="classObject.html">Object</a> *obj, int i, int j)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adeab83a1c9b5baf97e963f65847b277b"></a><!-- doxytag: member="Ocean::MoveObject" ref="adeab83a1c9b5baf97e963f65847b277b" args="(Object *obj, std::pair&lt; int, int &gt; coords)" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>MoveObject</b> (<a class="el" href="classObject.html">Object</a> *obj, std::pair&lt; int, int &gt; coords)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae9106a2b296255a476b6dbad3ec9399"></a><!-- doxytag: member="Ocean::Draw" ref="aae9106a2b296255a476b6dbad3ec9399" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae61b3a3c8247476add2d45d9cc4cb486"></a><!-- doxytag: member="Ocean::Singleton&lt; Ocean &gt;" ref="ae61b3a3c8247476add2d45d9cc4cb486" args="" -->
 class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOcean.html#ae61b3a3c8247476add2d45d9cc4cb486">Singleton&lt; Ocean &gt;</a></td></tr>
 </table>
-<hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Factory pattern (?). </p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a66c18f1745faa96683ba9d42bcdec9bb"></a><!-- doxytag: member="Ocean::CreateNewObject" ref="a66c18f1745faa96683ba9d42bcdec9bb" args="(ObjectType t, int i, int j)" -->
 <div class="memitem">
@@ -106,7 +107,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -134,7 +135,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -162,12 +163,30 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>Return pointer to the object located by coordinates (i, j) if any or NULL pointer otherwise </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4ebb157e229dd87113c376366f99888"></a><!-- doxytag: member="Ocean::Live" ref="ac4ebb157e229dd87113c376366f99888" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ocean::Live </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ocean starts it's life </p>
 
 </div>
 </div>
@@ -196,12 +215,58 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>Move object to the coordinates (i, j). Return false if operation fails. </p>
+
+</div>
+</div>
+<a class="anchor" id="af99ba918325e6190c0185d01d53d4efb"></a><!-- doxytag: member="Ocean::SetSize" ref="af99ba918325e6190c0185d01d53d4efb" args="(int width, int height)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ocean::SetSize </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>height</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Sets size of ocean </p>
+
+</div>
+</div>
+<a class="anchor" id="a407104f71338029cd64258afc107187a"></a><!-- doxytag: member="Ocean::TicTac" ref="a407104f71338029cd64258afc107187a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ocean::TicTac </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Time is money </p>
 
 </div>
 </div>
@@ -223,7 +288,7 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Apr 29 21:45:45 2010 for oceanmodeling by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Apr 30 03:24:59 2010 for oceanmodeling by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
