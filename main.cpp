@@ -15,10 +15,7 @@ int main() {
     for(int i =0; i < 10; ++i)
       ocean.CreateNewObject(OBSTACLE, rand() % 10, rand() % 10);
     std::cout << "ocean created\n";
-    for(int i = 0; i < 30; ++i){
-      ocean.TicTac();
-      sleep(1);
-    }
+    ocean.Live();
     //ocean.TicTac();
     return 0;
 }

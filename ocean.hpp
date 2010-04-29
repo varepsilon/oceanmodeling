@@ -42,6 +42,11 @@ public:
         return GetObject(coords.first, coords.second);
     }
 
+    Object* operator()(int i, int j) { return GetObject(i, j); }
+
+    /*!
+      * Sets size of ocean
+    */
     void SetSize(int width, int height){
       if(width > 0 && height > 0){
         inhabitants = vector<vector<Object *> >(width, vector<Object *>(height, (Object*)NULL ));
@@ -50,7 +55,9 @@ public:
         Draw();
       }
     }
-
+    /*!
+      * Time is money
+    */
     void TicTac(){
       set<Object *> acted_objects;
 
@@ -62,7 +69,16 @@ public:
           }
     }
 
-    Object* operator()(int i, int j) { return GetObject(i, j); }
+    /*!
+     * ocean starts it's life
+    */
+    void Live(){
+      for(;;){
+        TicTac();
+        sleep(1);
+      }
+    }
+
     /*!
       * Create new object of type t under the coordinates (i, j). Return
       * false if operation fails.
