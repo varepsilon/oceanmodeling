@@ -4,6 +4,7 @@
 #include "object.h"
 #include <vector>
 #include <utility>
+#include <map>
 template <typename T>
 class Singleton {
 public:
@@ -24,6 +25,7 @@ protected:
  */
  using std::vector;
  using std::pair;
+ using std::map;
 class Ocean : public Singleton<Ocean> {
 public:
     /*!
@@ -44,14 +46,18 @@ public:
         this-> width = width;
         this-> height = height;
         Draw();
+        std::cout << "setsize draw\n";
       }
     }
 
     void TicTac(){
+    map<Object *, bool> acted_objects;
       for(int i = 0; i < width; ++i)
         for(int j = 0; j < height; ++j)
-          if(inhabitants[i][j] != NULL)
+          if(inhabitants[i][j] != NULL && !acted_objects[inhabitants[i][j]]){
+            acted_objects[inhabitants[i][j]] = true;
             inhabitants[i][j]->Act();
+          }
     }
 
     Object* operator()(int i, int j) { return GetObject(i, j); }
@@ -80,6 +86,7 @@ public:
         }
       }
       Draw();
+      std::cout << "create draw\n";
       return true;
     }
 
@@ -97,6 +104,7 @@ public:
       delete inhabitants[i][j];
       inhabitants[i][j] = NULL;
       Draw();
+      std::cout << "delete draw\n";
       return true;
     }
 
@@ -109,11 +117,14 @@ public:
       */
 
     bool MoveObject(Object* obj, int i, int j){
-      if(inhabitants[i][j] != NULL)
+      if(inhabitants[i][j] != NULL || i < 0 || i >= width || j < 0 || j >= height )
         return false;
       pair<int,int> coords = obj->GetCoords();
+      if (i == coords.first && j == coords.second)
+        return true;
       std::swap(inhabitants[coords.first][coords.second], inhabitants[i][j]);
       Draw();
+      std::cout << "move draw\n";
       return true;
     }
 
@@ -122,21 +133,24 @@ public:
     }
 
     void Draw(){
-      static bool printed = false;
-      for(int i = 0; i < width; ++i){
-        for(int j = 0; j < height; ++j){
-          if(printed)
-            std::cout << "";
-          if(inhabitants[i][j] != NULL)
-            inhabitants[i][j]->PrintSelf();
+      //static bool printed = false;
+      for(int i = 0; i < height; ++i){
+        for(int j = 0; j < width; ++j){
+          //if(printed)
+            //std::cout << "\b";
+          if(inhabitants[j][i] != NULL)
+            inhabitants[j][i]->PrintSelf();
           else
             std::cout << ' ';
         }
-        if(printed)
-          std::cout << "";
-        std::cout << std::endl;
+        //if(printed)
+          //std::cout << "\b";
+        std::cout << '|' <<std::endl;
       }
-      printed = true;
+      for(int i = 0; i < width; ++i)
+        std::cout << '-';
+      std::cout << std::endl;
+      //printed = true;
     }
 private:
     vector<vector<Object *> > inhabitants;
