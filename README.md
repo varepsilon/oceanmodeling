@@ -2,8 +2,8 @@ This is a project connected with yandex-school programming studies (2nd task, 4t
 
 Roles of programmers:
 
-Sasha: Classes inheritance structure (Object: Hunter, Prey, Obstacle), classes interfaces design (Singleton, Ocean interfaces), implementation of multiple dispatch and all code in object.h/object.cpp.
-Maxim: Implementation of Ocean singleton factory, main modeling loop (all implementation code in ocean.hpp and main.cpp).
+- **Sasha**: Classes inheritance structure (Object: Hunter, Prey, Obstacle), classes interfaces design (Singleton, Ocean interfaces), implementation of multiple dispatch and all code in object.h/object.cpp.
+- **Maxim**: Implementation of Ocean singleton factory, main modeling loop (all implementation code in ocean.hpp and main.cpp).
 See commit log for more details.
 
 Design patterns and idioms used:
